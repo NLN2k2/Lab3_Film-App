@@ -5,11 +5,11 @@ export default class Navigation extends Component {
     return (
       <div>
         <nav>
-          <ul>
-                <li><a className='active' href='#home'>Home</a></li>
-                <li><a href='#news'>News</a></li>
-                <li><a href='#about'>About</a></li>
-                <li><a href='#contact'>Contact</a></li>
+          <ul className="active1">
+                <li><a className='active1_link' href='#home'>Home</a></li>
+                <li><a className='active1_link' href='#news'>News</a></li>
+                <li><a className='active1_link' href='#about'>About</a></li>
+                <li><a className='active1_link' href='#contact'>Contact</a></li>
           </ul>
         </nav>
       </div>
