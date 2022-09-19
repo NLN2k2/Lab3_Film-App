@@ -11,7 +11,7 @@ export default function Films() {
                <h3>{film.name}</h3>
                <p className='title'>{film.year}</p>
                <p className='nation'>{film.nation}</p>
-               <p><button>Detail</button></p>
+               <p><button>Pre-order Now</button></p>
              </div>
            </div>
           ))}
