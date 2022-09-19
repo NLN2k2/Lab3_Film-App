@@ -9,7 +9,8 @@ export default function Films() {
              <div className='card'>
              <img src={film.img}/>
                <h3>{film.name}</h3>
-               <p className='title'>{film.date}</p>
+               <p className='title'>{film.year}</p>
+               <p className='nation'>{film.nation}</p>
                <p><button>Detail</button></p>
              </div>
            </div>
