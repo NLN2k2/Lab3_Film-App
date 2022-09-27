@@ -1,18 +1,30 @@
-import React, { Component } from "react";
-export default class Navigation extends Component {
-  
-  render() {
-    return (
-      <div>
-        <nav>
-          <ul className="active1">
-                <li><a className='active1_link' href='#home'>Home</a></li>
-                <li><a className='active1_link' href='#news'>News</a></li>
-                <li><a className='active1_link' href='#about'>About</a></li>
-                <li><a className='active1_link' href='#contact'>Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    );
-  }
+import React from 'react'
+import { useContext } from 'react'
+import { ThemeContext } from './ThemeContents'
+export default function Navigation() {
+  const { theme, toggle, dark } = useContext(ThemeContext)
+  return (
+    <div>
+      <nav>
+          <ul className='active1_link' >
+              <li style={{ backgroundColor: theme.backgroundColor }}><a className='active1' href='#home' style={{ color: theme.color }}>Home</a></li>
+              <li style={{ backgroundColor: theme.backgroundColor }}><a className='active2' href='#news'style={{ color: theme.color }}>News</a></li>
+              <li style={{ backgroundColor: theme.backgroundColor }}><a className='active3' href='#about'style={{ color: theme.color }}>About</a></li>
+              <li style={{ backgroundColor: theme.backgroundColor }}><a className='active4' href='#contact'style={{ color: theme.color }}>Contact</a></li>    
+          <div style={{position: 'relative'}}>
+          <li style={{ backgroundColor: theme.backgroundColor }}><a className='switch-mode' href='#' onClick={toggle}
+          style={{
+            backgroundColor: theme.backgroundColor,
+            color: theme.color,
+            outline: 'none',
+          }} data-testid="toggle-theme-btn"
+        >
+          Switch Nav to {!dark ? 'Dark' : 'Light'} mode
+         </a>
+         </li>
+         </div>
+        </ul> 
+      </nav>
+    </div>
+  )
 }
